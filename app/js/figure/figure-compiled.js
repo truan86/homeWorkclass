@@ -44,7 +44,7 @@ var Figure = function Figure(arr) {
     };
     sidesFn(this.x, this.y);
 
-    var perimetr = function perimetr(x, y) {
+    this.perimetr = function (x, y) {
         var sides = 0;
         var i = 0;
         while (i < x.length) {
@@ -57,7 +57,7 @@ var Figure = function Figure(arr) {
         }
         return Math.round(sides);
     };
-    this.perimetr = perimetr(this.x, this.y);
+    this.perimetr(this.x, this.y);
 };
 
 exports.default = Figure;

@@ -1,8 +1,8 @@
 import Figure from './figure-compiled';
-import Polygon from './polygon-compiled';
-import Rectangle from './rectangle-compiled';
-import Square from './square-compiled';
-import Triangle from './triangle-compiled';
+import Polygon from './../polygon-compiled';
+import Rectangle from './../rectangle-compiled';
+import Square from './../square-compiled';
+import Triangle from './../triangle-compiled';
 import Circle from './circle-compiled';
 
 //figure

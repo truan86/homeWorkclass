@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _polygonCompiled = require('./polygon-compiled');
+var _figureCompiled = require('./../figure-compiled');
 
-var _polygonCompiled2 = _interopRequireDefault(_polygonCompiled);
+var _figureCompiled2 = _interopRequireDefault(_figureCompiled);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16,24 +16,23 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Rectangle = (function (_Polygon) {
-    _inherits(Rectangle, _Polygon);
+var Circle = (function (_Figure) {
+    _inherits(Circle, _Figure);
 
-    function Rectangle(coordinates) {
-        _classCallCheck(this, Rectangle);
+    function Circle(coordinates) {
+        _classCallCheck(this, Circle);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Rectangle).call(this, coordinates));
+        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Circle).call(this, coordinates));
 
-        _this.side1 = _this.sides[0];
-        _this.side2 = _this.sides[1];
-        _this.area = _this.side1 * _this.side2;
-
+        _this.radius = _this.sides[0];
+        _this.area = Math.round(Math.pow(Math.PI * _this.radius, 2));
+        _this.perimetr = Math.round(2 * Math.PI * _this.radius);
         return _this;
     }
 
-    return Rectangle;
-})(_polygonCompiled2.default);
+    return Circle;
+})(_figureCompiled2.default);
 
-exports.default = Rectangle;
+exports.default = Circle;
 
-//# sourceMappingURL=rectangle-compiled.js.map
+//# sourceMappingURL=circle-compiled.js.map

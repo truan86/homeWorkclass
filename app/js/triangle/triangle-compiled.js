@@ -4,9 +4,9 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _figureCompiled = require('./figure-compiled');
+var _polygonCompiled = require('./polygon-compiled');
 
-var _figureCompiled2 = _interopRequireDefault(_figureCompiled);
+var _polygonCompiled2 = _interopRequireDefault(_polygonCompiled);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16,23 +16,27 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Circle = (function (_Figure) {
-    _inherits(Circle, _Figure);
+var Triangle = (function (_Polygon) {
+    _inherits(Triangle, _Polygon);
 
-    function Circle(coordinates) {
-        _classCallCheck(this, Circle);
+    function Triangle(coordinates) {
+        _classCallCheck(this, Triangle);
 
-        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Circle).call(this, coordinates));
+        // class polygon calculates the perimeter  'this.perimetr'
 
-        _this.radius = _this.sides[0];
-        _this.area = Math.round(Math.pow(Math.PI * _this.radius, 2));
-        _this.perimetr = Math.round(2 * Math.PI * _this.radius);
+        var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Triangle).call(this, coordinates));
+
+        var p = _this.perimetr / 2;
+        var sideA = _this.sides[0];
+        var sideB = _this.sides[1];
+        var sideC = _this.sides[2];
+        _this.area = Math.sqrt(p * (p - sideA) * (p - sideB) * (p - sideC));
         return _this;
     }
 
-    return Circle;
-})(_figureCompiled2.default);
+    return Triangle;
+})(_polygonCompiled2.default);
 
-exports.default = Circle;
+exports.default = Triangle;
 
-//# sourceMappingURL=circle-compiled.js.map
+//# sourceMappingURL=triangle-compiled.js.map

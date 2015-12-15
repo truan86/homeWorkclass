@@ -25,7 +25,6 @@ class Figure {
             y.push(item[1]);
         });
 
-
         let sidesFn = function (x, y) {
             let i = 0;
             while (i < x.length) {
@@ -39,7 +38,7 @@ class Figure {
         };
         sidesFn(this.x, this.y);
 
-        let perimetr = function (x, y) {
+        this.perimetr = function (x, y) {
             let sides = 0;
             let i = 0;
             while (i < x.length) {
@@ -52,7 +51,7 @@ class Figure {
             }
             return Math.round(sides);
         };
-        this.perimetr = perimetr(this.x, this.y);
+        this.perimetr(this.x, this.y);
     }
 }
 

@@ -4,19 +4,19 @@ var _figureCompiled = require('./figure-compiled');
 
 var _figureCompiled2 = _interopRequireDefault(_figureCompiled);
 
-var _polygonCompiled = require('./polygon-compiled');
+var _polygonCompiled = require('./../polygon-compiled');
 
 var _polygonCompiled2 = _interopRequireDefault(_polygonCompiled);
 
-var _rectangleCompiled = require('./rectangle-compiled');
+var _rectangleCompiled = require('./../rectangle-compiled');
 
 var _rectangleCompiled2 = _interopRequireDefault(_rectangleCompiled);
 
-var _squareCompiled = require('./square-compiled');
+var _squareCompiled = require('./../square-compiled');
 
 var _squareCompiled2 = _interopRequireDefault(_squareCompiled);
 
-var _triangleCompiled = require('./triangle-compiled');
+var _triangleCompiled = require('./../triangle-compiled');
 
 var _triangleCompiled2 = _interopRequireDefault(_triangleCompiled);
 

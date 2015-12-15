@@ -1,4 +1,4 @@
-import Figure from './figure-compiled';
+import Figure from './../figure-compiled';
 
 class Circle extends Figure {
     constructor(coordinates) {

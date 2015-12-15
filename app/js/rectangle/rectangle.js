@@ -3,10 +3,10 @@ import Polygon from './polygon-compiled';
 class Rectangle extends Polygon {
     constructor(coordinates) {
         super(coordinates);
-        this.side1 = this.sides[0];
-        this.side2 = this.sides[1];
-        this.area = (this.side1 * this.side2);
-
+        let [a,b]=this.sides;
+        this.side1 = a;
+        this.side2 = b;
+        this.area = this.side1 * this.side2;
     }
 }
 
